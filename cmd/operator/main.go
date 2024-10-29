@@ -120,6 +120,8 @@ func newApp(name string) *cli.App {
 }
 
 func main() {
+	go verifyLicenseLoop()
+
 	args := os.Args
 	// Set the orchestrator app name.
 	appName := filepath.Base(args[0])
